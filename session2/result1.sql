@@ -1,0 +1,10 @@
+INSERT INTO Problem1 (task,result,motivation) VALUES ('a', FALSE, 'Capaciteit dicteert niet het autotype. Meerdere autotypen hebben bijvoorbeeld 5 zitplaatsen'),
+        ('b', TRUE, 'Een autotype kan maar één capaciteit hebben'),
+        ('c', FALSE, 'Uit F kun je niet een pakje isoleren, omdat er sprake kan zijn van meerdere pakjes'),
+        ('d', TRUE, 'Er is maar één factuur per pakketje, en uit F volgt A'),
+        ('e', TRUE, 'Uit P volgt direct G, en O volgt uit F'),
+        ('f', FALSE, 'Bezorger B kan mvoor meerdere voertuigen gerechtigd zijn'),
+        ('g', FALSE, 'Een voertuig kan voor meerdere bezorgers gecertificeerd zijn'),
+        ('h', TRUE, 'B is onafhankelijk van andere variabelen'),
+        ('i', TRUE, 'Als uit V direct C volgt, dan is er ook een MVD. Oftewel, uit '),
+        ('j', FALSE, 'Capaciteit dicteert niet het autotype. Meerdere autotypen hebben bijvoorbeeld 5 zitplaatsen');
