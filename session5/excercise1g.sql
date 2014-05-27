@@ -4,7 +4,8 @@ CREATE TABLE Bestelling (
 )
 
 CREATE TRIGGER voegschrijvertoe 
-BEFORE INSERT ON Boek B
+AFTER INSERT ON Boek B
 WHEN NOT EXISTS (SELECT * FROM Boek B1
-                WHERE B1.auteur = NEW.auteur)
+                WHERE B1.auteur = NEW.auteur
+                AND B1.isbn != NEW.isbn)
 EXECUTE PROCEDURE (INSERT INTO Bestelling (isbn,aantal) VALUES (NEW.isbn, 1)

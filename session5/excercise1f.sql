@@ -7,7 +7,7 @@ CREATE TABLE Boek (
 CREATE TABLE Exemplaar(
     isbn varchar(13) REFERENCES Boek(isbn) 
         ON UPDATE CASCADE
-        INITIALLY DEFERRED NOT DEFERRABLE,
+        NOT DEFERRABLE,
     volgnummer integer,
     gewicht integer,
     kast varchar(50),
@@ -15,9 +15,8 @@ CREATE TABLE Exemplaar(
 );
 
 CREATE TRIGGER exemplaar 
-    AFTER DELETE ON Boek B 
-    DEFERRABLE INITIALLY IMMEDIATE
+    AFTER DELETE ON Boek 
     FOR EACH ROW 
     EXECUTE PROCEDURE 
         (DELETE * FROM Exemplaar E
-        WHERE E.isbn = B.isbn);
+        WHERE E.isbn = isbn);

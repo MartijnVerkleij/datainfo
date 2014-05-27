@@ -8,7 +8,7 @@ CREATE TABLE Exemplaar(
     isbn varchar(13) REFERENCES Boek(isbn) 
         ON UPDATE CASCADE 
         ON DELETE CASCADE
-        INITIALLY DEFERRED NOT DEFERRABLE,
+        NOT DEFERRABLE,
     volgnummer integer,
     gewicht integer,
     kast varchar(50),
