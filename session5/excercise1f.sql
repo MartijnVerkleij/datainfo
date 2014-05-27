@@ -19,5 +19,5 @@ CREATE TRIGGER exemplaar
     DEFERRABLE INITIALLY IMMEDIATE
     FOR EACH ROW 
     EXECUTE PROCEDURE 
-        DELETE * FROM Exemplaar E
-        WHERE E.isbn = B.isbn;
+        (DELETE * FROM Exemplaar E
+        WHERE E.isbn = B.isbn);
